@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="img"></div>
+    <form class="form">
+        <h2>Superficie en m²</h2>
+        <input class="area" type="text" id="uiSqft" class="floatLabel" name="total_sqft" value="1000">
+        
+        <h2>Nombre De Chambres</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-bhk-1" name="rooms" value="1"/>
+            <label for="radio-bhk-1">1</label>
+            <input type="radio" id="radio-bhk-2" name="rooms" value="2" checked/>
+            <label for="radio-bhk-2">2</label>
+            <input type="radio" id="radio-bhk-3" name="rooms" value="3"/>
+            <label for="radio-bhk-3">3</label>
+            <input type="radio" id="radio-bhk-4" name="rooms" value="4"/>
+            <label for="radio-bhk-4">4</label>
+            <input type="radio" id="radio-bhk-5" name="rooms" value="5"/>
+            <label for="radio-bhk-5">5</label>
+        </div>
+
+        <h2>Nombre D'Étages</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-bath-1" name="floors" value="1"/>
+            <label for="radio-bath-1">1</label>
+            <input type="radio" id="radio-bath-2" name="floors" value="2" checked/>
+            <label for="radio-bath-2">2</label>
+            <input type="radio" id="radio-bath-3" name="floors" value="3"/>
+            <label for="radio-bath-3">3</label>
+        </div>
+
+        <h2>Date de Construction</h2>
+        <input class="area" type="text" id="uimade" class="floatLabel" name="made" value="2000">
+
+        <h2>Options Supplémentaires</h2>
+        <div class="switch-field">
+            <input type="checkbox" id="has_pool" name="haspool">
+            <label for="has_pool">Piscine Compris</label>
+            <br><br>
+
+            <input type="checkbox" id="is_new_build" name="build">
+            <label for="is_new_build">Nouvelle Construction</label>
+            <br><br>
+
+            <input type="checkbox" id="has_yard" name="hasyard">
+            <label for="has_yard">Jardin Compris</label>
+            <br><br>
+        </div>
+
+       
+    </form>
+    <button class="submit" onclick="onClickedEstimatePrice(event)" type="button">Estimer le prix</button>
+    <div id="uiEstimatedPrice" class="result"><h2></h2></div>
+
+    <script src="app.js"></script> <!-- Assurez-vous que ce script est bien inclus ici -->
+</body>
+</html>
